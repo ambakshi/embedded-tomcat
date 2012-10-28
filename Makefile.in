@@ -1,0 +1,23 @@
+.PHONY: all jar uberjar clean run
+
+MVN ?= mvn
+RM ?= rm -f
+MKDIR ?= mkdir -p
+
+
+all: jar
+jar: target/@PKGNAME@.jar
+uberjar: target/@PKGNAME@-jar-with-dependencies.jar
+
+target/@PKGNAME@.jar:
+	@echo Building @PKGNAME@
+	$(MVN) package
+
+target/@PKGNAME@-jar-with-dependencies.jar:
+	$(MVN) assembly:single -DdescriptorId=jar-with-dependencies
+
+run: target/@PKGNAME@.jar
+	/bin/sh target/bin/webapp
+
+clean:
+	@$(RM) -r target

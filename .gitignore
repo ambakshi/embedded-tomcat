@@ -1,0 +1,6 @@
+Makefile
+autom4te.cache/
+target/
+config.log
+config.status
+pom.xml
