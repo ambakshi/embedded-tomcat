@@ -6,4 +6,10 @@ if test -z "$PKGNAME"; then
     PKGNAME="embeddedTomcatSample"
 fi
 AC_SUBST([PKGNAME])
+
+AC_ARG_VAR(VERSION, [ VERSION=, Use given package version])
+if test -z "$VERSION"; then
+    VERSION="1.0"
+fi
+AC_SUBST([VERSION])
 AC_OUTPUT(Makefile pom.xml)

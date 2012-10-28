@@ -10,7 +10,14 @@ heroku sample and wrapped it with autoconf + make.
     $ make run
 
 Now open your browser to http://localhost:8080. There are 
-`all jar uberjar clean reallyclean run` targets available.
+`all jar uberjar clean reallyclean run archive` targets
+available.
+
+## Build a package archive ($PKGNAME-$VERSION.tar.gz)
+
+I've found this to be very handy for making rpm packages.
+
+    $ make archive
 
 ## To rebuild the configure script
 To rebuild the configure script after modifiying configure.ac, run:

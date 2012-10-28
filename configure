@@ -563,6 +563,7 @@ PACKAGE_URL=''
 
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
+VERSION
 PKGNAME
 target_alias
 host_alias
@@ -609,7 +610,8 @@ enable_option_checking
       ac_precious_vars='build_alias
 host_alias
 target_alias
-PKGNAME'
+PKGNAME
+VERSION'
 
 
 # Initialize some variables set by options.
@@ -1219,6 +1221,7 @@ if test -n "$ac_init_help"; then
 
 Some influential environment variables:
   PKGNAME     PKGNAME=, Use given package name
+  VERSION     VERSION=, Use given package version
 
 Use these variables to override the choices made by `configure' or to help
 it to find libraries and programs with nonstandard names/locations.
@@ -1657,6 +1660,12 @@ $as_echo "$as_me: Sample tomcat embedded app." >&6;}
 
 if test -z "$PKGNAME"; then
     PKGNAME="embeddedTomcatSample"
+fi
+
+
+
+if test -z "$VERSION"; then
+    VERSION="1.0"
 fi
 
 ac_config_files="$ac_config_files Makefile pom.xml"

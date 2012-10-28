@@ -5,3 +5,7 @@ config.log
 config.status
 pom.xml
 tomcat.*/
+GIT_SHA1
+VERSION
+*.tar
+*.tar.gz
