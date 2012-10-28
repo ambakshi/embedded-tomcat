@@ -1,4 +1,4 @@
-.PHONY: all jar uberjar clean run
+.PHONY: all jar uberjar clean reallyclean run
 
 MVN ?= mvn
 RM ?= rm -f
@@ -20,4 +20,8 @@ run: target/@PKGNAME@.jar
 	/bin/sh target/bin/webapp
 
 clean:
-	@$(RM) -r target
+	$(RM) -r target
+
+reallyclean: clean
+	$(ECHO) "You'll have to run ./configure again!"
+	$(RM) config.status config.log pom.xml Makefile
