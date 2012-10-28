@@ -3,6 +3,7 @@
 MVN ?= mvn
 RM ?= rm -f
 MKDIR ?= mkdir -p
+ECHO ?= @echo
 
 
 all: jar
@@ -23,5 +24,5 @@ clean:
 	$(RM) -r target
 
 reallyclean: clean
-	$(ECHO) "You'll have to run ./configure again!"
-	$(RM) config.status config.log pom.xml Makefile
+	$(RM) config.log config.status pom.xml
+	$(ECHO) "You'll have to run ./configure again."
